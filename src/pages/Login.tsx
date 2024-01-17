@@ -12,10 +12,8 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const navigate = useNavigate();
   const [user, setUser] = useState({ email: "", password: "" });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,23 +42,27 @@ const Login = () => {
                 id="email"
                 type="email"
                 onChange={handleInputChange}
-                // type="text"
                 name="email"
                 value={user.email}
                 required
                 placeholder="m@example.com"
               />
             </div>
-            <div className="grid gap-2">
-              <Label htmlFor="password">Password</Label>
-              <Input
-                id="password"
-                name="password"
-                value={user.password}
-                onChange={handleInputChange}
-                type="password"
-                required
-              />
+            <div className="">
+              <div className="grid gap-2">
+                <Label htmlFor="password">Password</Label>
+                <Input
+                  id="password"
+                  name="password"
+                  value={user.password}
+                  onChange={handleInputChange}
+                  type="password"
+                  required
+                />
+              </div>
+              <div className="font-semibold cursor-pointer hover:underline text-xs">
+                Reset password
+              </div>
             </div>
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -84,17 +86,13 @@ const Login = () => {
             </div>
           </CardContent>
           <CardFooter>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center w-full">
               <Button type="submit" className="w-full">
                 Login User
               </Button>
-              <Button
-                // onClick={() => navigate("/login")}
-                variant="link"
-                className="flex gap-1 w-full"
-              >
-                <span>Forgot your password?</span>
-                <span className="text-blue-500">Reset here</span>
+              <Button variant="link" className="flex gap-1 w-full">
+                <span>Don't have account?</span>
+                <span className="text-blue-500">Signup</span>
               </Button>
             </div>
           </CardFooter>
