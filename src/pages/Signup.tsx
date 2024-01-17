@@ -105,27 +105,6 @@ const Signup = () => {
         </form>
       </Card>
     </div>
-    // <div>
-    //   <form onSubmit={handleSubmit}>
-    //     <input
-    //       required
-    //       onChange={handleInputChange}
-    //       type="text"
-    //       name="email"
-    //       value={user.email}
-    //       id="email"
-    //     />
-    //     <input
-    //       required
-    //       type="password"
-    //       name="password"
-    //       value={user.password}
-    //       id="password"
-    //       onChange={handleInputChange}
-    //     />
-    //     <button type="submit">Create User</button>
-    //   </form>
-    // </div>
   );
 };
 
