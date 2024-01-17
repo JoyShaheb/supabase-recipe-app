@@ -86,7 +86,7 @@ const Signup = () => {
             </div>
           </CardContent>
           <CardFooter>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center w-full">
               <Button type="submit" className="w-full">
                 Create account
               </Button>
