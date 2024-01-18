@@ -17,11 +17,7 @@ const DetailsPage = () => {
   //   userId,
   // });
 
-  const [
-    data,
-    // eslint-disable-next-line
-    setData,
-  ] = useState<IProfileData>({
+  const [data] = useState<IProfileData>({
     firstName: "",
     lastName: "",
     username: "",

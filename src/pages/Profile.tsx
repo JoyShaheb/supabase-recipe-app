@@ -24,11 +24,7 @@ const Profile = () => {
   //   userId,
   // });
 
-  const [
-    data,
-    // eslint-disable-next-line
-    setData,
-  ] = useState<IProfileData>({
+  const [data] = useState<IProfileData>({
     uid: userId,
     username: "",
     firstName: "",
