@@ -1,14 +1,7 @@
 import { ThemeTypesEnum } from "@/types/enum";
 import DarkModeSwitch from "./DarkModeSwitch";
 import SidebarLink from "./SidebarLink";
-import {
-  PieChart,
-  FolderClosed,
-  FileBarChart,
-  UserCircle,
-  ShoppingBag,
-  LogOut,
-} from "lucide-react";
+import { UserCircle, ShoppingBag, LogOut } from "lucide-react";
 
 const SideBarMenu = ({
   theme,

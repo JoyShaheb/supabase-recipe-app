@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 // import { toast } from "react-toastify";
@@ -16,7 +16,7 @@ import MobileSideBar from "./MobileSideBar";
 import { RootState, themeSwitch } from "@/store";
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const dispatch = useDispatch();
   // const [logout] = useLogoutMutation();

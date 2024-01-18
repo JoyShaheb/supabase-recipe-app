@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InputFieldWithLabel from "@/components/Form/InputFieldWithLabel";
 import { Button } from "@/components/ui/button";
 import { RootState } from "@/store";
@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { IProfileData } from "@/types/interface";
 
 const DetailsPage = () => {
-  const userId = useSelector((state: RootState) => state.user.uid);
+  // const userId = useSelector((state: RootState) => state.user.uid);
   const email = useSelector((state: RootState) => state.user.email);
   // const {
   //   data: profileData,
@@ -35,7 +35,7 @@ const DetailsPage = () => {
 
   // const [updateProfile] = useUpdateUserProfileMutation();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = () => {
     // setData({
     //   ...data,
     //   [e.target.name]: e.target.value,
@@ -52,7 +52,10 @@ const DetailsPage = () => {
   };
 
   return (
-    <div className="flex flex-col gap-7 items-center justify-center h-[90vh]">
+    <div
+      onChange={(e: any) => setData(e)}
+      className="flex flex-col gap-7 items-center justify-center h-[90vh]"
+    >
       <div className="">
         <h1 className="text-center text-2xl font-bold">Profile Details</h1>
         <h6 className="opacity-[0.6] text-center font-light">{email}</h6>
