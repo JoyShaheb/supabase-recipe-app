@@ -26,7 +26,7 @@ const Profile = () => {
 
   const [
     data,
-    // @ts-expect-error
+    // eslint-disable-next-line
     setData,
   ] = useState<IProfileData>({
     uid: userId,

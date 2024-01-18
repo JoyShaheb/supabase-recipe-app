@@ -17,7 +17,11 @@ const DetailsPage = () => {
   //   userId,
   // });
 
-  const [data, setData] = useState<IProfileData>({
+  const [
+    data,
+    // eslint-disable-next-line
+    setData,
+  ] = useState<IProfileData>({
     firstName: "",
     lastName: "",
     username: "",
@@ -27,7 +31,6 @@ const DetailsPage = () => {
     email: "",
     address: "",
   });
-  console.log(data);
 
   // useEffect(() => {
   //   setData(profileData as IProfileData);
@@ -52,10 +55,7 @@ const DetailsPage = () => {
   };
 
   return (
-    <div
-      onChange={(e: any) => setData(e)}
-      className="flex flex-col gap-7 items-center justify-center h-[90vh]"
-    >
+    <div className="flex flex-col gap-7 items-center justify-center h-[90vh]">
       <div className="">
         <h1 className="text-center text-2xl font-bold">Profile Details</h1>
         <h6 className="opacity-[0.6] text-center font-light">{email}</h6>
