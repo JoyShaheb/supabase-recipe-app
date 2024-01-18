@@ -11,8 +11,10 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({ email: "", password: "" });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -79,11 +81,15 @@ const Signup = () => {
           </CardContent>
           <CardFooter>
             <div className="flex flex-col items-center w-full">
-              <Button type="submit" className="w-full">
+              <Button
+                type="submit"
+                className="w-full"
+                onClick={() => navigate("/login")}
+              >
                 Create account
               </Button>
               <Button
-                // onClick={() => navigate("/login")}
+                onClick={() => navigate("/login")}
                 variant="link"
                 className="flex gap-1 w-full"
               >
