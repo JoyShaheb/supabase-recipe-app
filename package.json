@@ -1,5 +1,5 @@
 {
-  "name": "supabase-recipe-app",
+  "name": "recipe-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,6 @@
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-tabs": "^1.0.4",
     "@reduxjs/toolkit": "^2.0.1",
-    "@supabase/supabase-js": "^2.39.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.311.0",

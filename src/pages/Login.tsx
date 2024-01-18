@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { supabase } from "../supabase";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,8 +18,6 @@ const Login = () => {
   const [user, setUser] = useState({ email: "", password: "" });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { data, error } = await supabase.auth.signInWithPassword(user);
-    console.log(data, error);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
